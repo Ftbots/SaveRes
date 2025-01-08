@@ -3,7 +3,7 @@ from config import API_ID, API_HASH, BOT_TOKEN, ADMINS
 
 class Bot(Client):
 
-    def __init__(self):
+    def __init__(self):  # Use __init__ for constructor
         super().__init__(
             "techvj login",
             api_id=API_ID,
@@ -30,3 +30,7 @@ class Bot(Client):
     async def stop(self, *args):
         await super().stop()
         print('Bot Stopped Bye')
+
+if __name__ == "__main__":
+    bot = Bot()
+    bot.run()
